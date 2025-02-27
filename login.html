@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirish</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Kirish</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Bosh sahifa</a></li>
+                <li><a href="about.html">Men haqimda</a></li>
+                <li><a href="contact.html">Bog‘lanish</a></li>
+                <li><a href="profile.html">Profil</a></li>
+                <li><a href="login.html">Kirish</a></li>
+                <li><a href="signup.html">Ro‘yxatdan o‘tish</a></li>
+                <li>
+                    <select id="language" onchange="changeLanguage()">
+                        <option value="uz">O‘zbekcha</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Hisobingizga kiring</h2>
+        <form action="dashboard.html" method="post">
+            <label for="username">Foydalanuvchi nomi yoki Email:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Parol:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Kirish</button>
+        </form>
+        <p>Hisobingiz yo‘qmi? <a href="signup.html">Ro‘yxatdan o‘tish</a></p>
+    </div>
+    <script>
+        function changeLanguage() {
+            let lang = document.getElementById("language").value;
+            if (lang === "en") {
+                window.location.href = "login.html";
+            } else {
+                window.location.href = "login.html";
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

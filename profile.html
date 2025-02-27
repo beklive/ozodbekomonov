@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mening Profilim</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Bosh sahifa</a></li>
+                <li><a href="about.html">Men haqimda</a></li>
+                <li><a href="contact.html">Bog‘lanish</a></li>
+                <li><a href="profile.html">Profil</a></li>
+                <li><a href="login.html">Kirish</a></li>
+                <li><a href="signup_uz.html">Ro‘yxatdan o‘tish</a></li>
+                <li>
+                    <select id="language" onchange="changeLanguage()">
+                        <option value="uz">O‘zbekcha</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Profil ma'lumotlari</h2>
+        <img src="profile.jpg" alt="Profil rasmi" width="150" height="150">
+        <p><strong>Ism:</strong> Ozodbek Omonov</p>
+        <p><strong>Tug‘ilgan sana:</strong> 17-iyul, 2006</p>
+        <p><strong>Hudud:</strong> Toshkent viloyati, Bo‘ka tumani</p>
+        <p><strong>Qiziqishlar:</strong> Dasturlash, blog yuritish, texnologiyalar</p>
+        <button onclick="editProfile()">Profilni tahrirlash</button>
+    </div>
+    <script>
+        function changeLanguage() {
+            let lang = document.getElementById("language").value;
+            if (lang === "en") {
+                window.location.href = "profile.html";
+            } else {
+                window.location.href = "profile.html";
+            }
+        }
+        
+        function editProfile() {
+            alert("Profilni tahrirlash funksiyasi hali qo‘shilmagan.");
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

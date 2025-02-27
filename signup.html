@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ro‘yxatdan o‘tish</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ro‘yxatdan o‘tish</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Bosh sahifa</a></li>
+                <li><a href="about.html">Men haqimda</a></li>
+                <li><a href="contact.html">Bog‘lanish</a></li>
+                <li><a href="profile.html">Profil</a></li>
+                <li><a href="login.html">Kirish</a></li>
+                <li><a href="signup.html">Ro‘yxatdan o‘tish</a></li>
+                <li>
+                    <select id="language" onchange="changeLanguage()">
+                        <option value="uz">O‘zbekcha</option>
+                        <option value="en">English</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Yangi hisob yaratish</h2>
+        <form action="dashboard.html" method="post">
+            <label for="fullname">To‘liq ism:</label>
+            <input type="text" id="fullname" name="fullname" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="username">Foydalanuvchi nomi:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Parol:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="confirm_password">Parolni tasdiqlang:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+            
+            <button type="submit">Ro‘yxatdan o‘tish</button>
+        </form>
+        <p>Allaqachon hisobingiz bormi? <a href="login.html">Kirish</a></p>
+    </div>
+    <script>
+        function changeLanguage() {
+            let lang = document.getElementById("language").value;
+            if (lang === "en") {
+                window.location.href = "signup.html";
+            } else {
+                window.location.href = "signup.html";
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

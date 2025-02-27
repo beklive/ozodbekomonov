@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men Haqimda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Men Haqimda</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Bosh sahifa</a></li>
+                <li><a href="about.html">Men haqimda</a></li>
+                <li><a href="contact.html">Bog‘lanish</a></li>
+                <li><a href="profile.html">Profil</a></li>
+                <li><a href="login.html">Kirish</a></li>
+                <li><a href="signup_uz.html">Ro‘yxatdan o‘tish</a></li>
+                <li>
+                    <select id="language" onchange="changeLanguage()">
+                        <option value="uz">O‘zbekcha</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Men haqimda</h2>
+        <p>Ismim Ozodbek Omonov. 2006-yil 17-iyulda Toshkent viloyati, Bo‘ka tumanida tug‘ilganman. Texnologiya, dasturlash va blog yuritish bilan shug‘ullanaman. Shuningdek, kosmosga oid filmlarni tomosha qilishni yoqtiraman.</p>
+        <p>Hozirda veb-dasturlash va kontent yaratish bilan bog‘liq turli loyihalar ustida ishlayapman. Maqsadim - o‘z bilim va tajribamni blogim va ijtimoiy tarmoqlar orqali boshqalar bilan bo‘lishish.</p>
+    </div>
+    <script>
+        function changeLanguage() {
+            let lang = document.getElementById("language").value;
+            if (lang === "en") {
+                window.location.href = "about.html";
+            } else {
+                window.location.href = "about.html";
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bog‘lanish</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bog‘lanish</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Bosh sahifa</a></li>
+                <li><a href="about.html">Men haqimda</a></li>
+                <li><a href="contact.html">Bog‘lanish</a></li>
+                <li><a href="profile.html">Profil</a></li>
+                <li><a href="login.html">Kirish</a></li>
+                <li><a href="signup.html">Ro‘yxatdan o‘tish</a></li>
+                <li>
+                    <select id="language" onchange="changeLanguage()">
+                        <option value="uz">O‘zbekcha</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Biz bilan bog‘laning</h2>
+        <p>Agar biror savolingiz yoki taklifingiz bo‘lsa, quyidagi ma'lumotlar orqali biz bilan bog‘lanishingiz mumkin:</p>
+        <ul>
+            <li><strong>Telefon:</strong> +998881599911</li>
+            <li><strong>Email:</strong> ozodbekomonov1706@gmail.com</li>
+            <li><strong>Telegram:</strong> <a href="https://t.me/ozodbek_omonovv" target="_blank">@ozodbek_omonovv</a></li>
+        </ul>
+        <h3>Bizga xabar yuboring</h3>
+        <form action="send_message.php" method="post">
+            <label for="name">Ismingiz:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Xabaringiz:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit">Yuborish</button>
+        </form>
+    </div>
+    <script>
+        function changeLanguage() {
+            let lang = document.getElementById("language").value;
+            if (lang === "en") {
+                window.location.href = "contact.html";
+            } else {
+                window.location.href = "contact.html";
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
